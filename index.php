@@ -12,7 +12,10 @@ $post_pagina = 5;
 
 $inicio = ($pagina > 1) ? ($pagina * $post_pagina - $post_pagina) : 0;
 
-$articulos = $conexion->prepare("SELECT SQL_CALC_FOUND_ROWS * FROM articulos LIMIT $inicio, $post_pagina");
+$articulos = $conexion->prepare(
+    "SELECT SQL_CALC_FOUND_ROWS * FROM 
+    articulos LIMIT $inicio, $post_pagina"
+    );
 
 $articulos->execute();
 $articulos = $articulos->fetchAll();

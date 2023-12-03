@@ -13,7 +13,6 @@
     <div class="contenedor">
         <h1>Articulos</h1>
         <section class="articulos">
-
             <ul>
                 <?php foreach ($articulos as $articulo): ?>
                     <li><?php echo $articulo['id'] . '.- ' . $articulo['articulo'] ?></li>
@@ -29,7 +28,6 @@
                 <?php else: ?>
                     <li><a href="?pagina=<?php echo $pagina - 1 ?>">&laquo;</a></li>
                 <?php endif; ?>
-
                 <!-- Ejecutamos un ciclo para mostrar lñas paginas -->
                 <?php
                     for($i = 1; $i <= $numero_paginas; $i++){
@@ -40,7 +38,6 @@
                         }
                     }
                 ?>
-
                 <!-- Establecemos cuando el boton de "Siguente" estará desabilitado -->
                 <?php if ($pagina == $numero_paginas): ?>
                     <li class="disabled">&raquo;</li>
